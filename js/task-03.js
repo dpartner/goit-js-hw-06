@@ -22,7 +22,7 @@ const images = [
 // Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 
 const createImage = imgProp => {
-  const imgItemMarkup = `<li><img src="${imgProp.url}" alt="${imgProp.alt}"></li>`;
+  const imgItemMarkup = `<li class="gallery__list-item"><img class="gallery__list-item-img" src="${imgProp.url}" alt="${imgProp.alt}"></li>`;
   return imgItemMarkup;
 };
 
