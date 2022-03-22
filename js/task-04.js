@@ -4,4 +4,27 @@
 
 // Обновляй интерфейс новым значением переменной counterValue.
 
-const counterValue = document.querySelector('#value');
+const ref = {
+  value: document.querySelector('#value'),
+  decrementButton: document.querySelector('[data-action="decrement"]'),
+  incrementButton: document.querySelector('[data-action="increment"]'),
+};
+
+ref.decrementButton.addEventListener('click', onDownValue);
+ref.incrementButton.addEventListener('click', onUpValue);
+
+let counterValue = Number(ref.value.textContent);
+
+function onDownValue() {
+  counterValue -= 1;
+  console.log(counterValue);
+  ref.value.textContent = counterValue;
+  return counterValue;
+}
+
+function onUpValue() {
+  counterValue += 1;
+  console.log(counterValue);
+  ref.value.textContent = counterValue;
+  return counterValue;
+}
