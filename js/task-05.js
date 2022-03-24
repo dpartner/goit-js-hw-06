@@ -9,7 +9,5 @@ ref.input.addEventListener('input', onChangeName);
 
 function onChangeName(event) {
   const inputValue = event.currentTarget.value;
-  inputValue !== ''
-    ? (ref.output.textContent = inputValue)
-    : (ref.output.textContent = 'Anonymous');
+  ref.output.textContent = inputValue !== '' ? inputValue : 'Anonymous';
 }

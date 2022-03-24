@@ -7,6 +7,9 @@ const ref = {
 
 ref.range.addEventListener('input', onChangeFontSize);
 
+const startFontSize = ref.range.value;
+ref.text.style.fontSize = `${startFontSize}px`;
+
 function onChangeFontSize(event) {
-  text.style.fontSize = `${event.currentTarget.value}px`;
+  ref.text.style.fontSize = `${event.currentTarget.value}px`;
 }

@@ -13,7 +13,7 @@ const ref = {
 ref.decrementButton.addEventListener('click', onDownValue);
 ref.incrementButton.addEventListener('click', onUpValue);
 
-let counterValue = Number(ref.value.textContent);
+let counterValue = 0;
 
 function onDownValue() {
   counterValue -= 1;

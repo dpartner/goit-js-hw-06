@@ -13,6 +13,4 @@ const categoriesProperty = category => {
   console.log('Elements: ', category.lastElementChild.children.length);
 };
 
-categoriesProperty(allCategoriesEl[0]);
-categoriesProperty(allCategoriesEl[1]);
-categoriesProperty(allCategoriesEl[2]);
+allCategoriesEl.forEach(categoriesProperty);
